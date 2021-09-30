@@ -6,17 +6,21 @@ public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] private bool moving;
 
-    [SerializeField] private Vector2 velocity;
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            moving = true;
+            other.collider.transform.SetParent(transform);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionExit2D(Collision2D other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.collider.transform.SetParent(null);
+        }
     }
 }
