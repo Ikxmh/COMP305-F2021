@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Trap
   - MovingPlatform
+  - TlitingPlatform
+  - TurningPlatform
   layers:
   - Default
   - TransparentFX

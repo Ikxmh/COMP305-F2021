@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;
     private bool isFacingRight = true;
 
+    //Testing Variables 
+    [SerializeField] private GameObject titlingPlatformDetection;
+    [SerializeField] private Rigidbody2D tiltingRB;
+    [SerializeField] private float thrust = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +51,10 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
+        RaycastHit2D tiltingPlatform = Physics2D.Raycast(titlingPlatformDetection.transform.position, -Vector2.up);
+        Debug.DrawRay(titlingPlatformDetection.transform.position, -Vector2.up * tiltingPlatform.distance, Color.red);
+
+       
         // Communicate with the animator 
         anim.SetFloat("xVelocity", Mathf.Abs(rBody.velocity.x));
         anim.SetFloat("yVelocity", rBody.velocity.y);
@@ -55,6 +64,14 @@ public class PlayerController : MonoBehaviour
     private bool GroundCheck()
     {
         return Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRadius, whatisGround); 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("TurningPlatform"))
+        {
+            tiltingRB.AddForce(transform.up * thrust);
+        }
     }
 
 
