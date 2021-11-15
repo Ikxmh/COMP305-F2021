@@ -13,9 +13,6 @@ public class MovingPlatform : MonoBehaviour
 
     public Transform[] children;
 
-    [SerializeField] private GameObject titlingPlatformDetection;
-
-
     // ensure that the children does not move along with the platform
     private void Awake()
     {
@@ -40,8 +37,8 @@ public class MovingPlatform : MonoBehaviour
         Vector3 movement = Vector3.right * direction * speed * Time.fixedDeltaTime;
         transform.Translate(movement);
 
-        RaycastHit2D tiltingPlatform = Physics2D.Raycast(titlingPlatformDetection.transform.position, -Vector2.up);
-        Debug.DrawRay(titlingPlatformDetection.transform.position, -Vector2.up * tiltingPlatform.distance, Color.red);
+        //RaycastHit2D tiltingPlatform = Physics2D.Raycast(titlingPlatformDetection.transform.position, -Vector2.up);
+       // Debug.DrawRay(titlingPlatformDetection.transform.position, -Vector2.up * tiltingPlatform.distance, Color.red);
 
 
     }
