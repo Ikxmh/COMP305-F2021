@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
 
     //Testing Variables 
-    [SerializeField] private GameObject titlingPlatformDetection;
     [SerializeField] private Rigidbody2D tiltingRB;
     [SerializeField] private float thrust = 20f;
 
@@ -50,10 +49,6 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-
-        RaycastHit2D tiltingPlatform = Physics2D.Raycast(titlingPlatformDetection.transform.position, -Vector2.up);
-        Debug.DrawRay(titlingPlatformDetection.transform.position, -Vector2.up * tiltingPlatform.distance, Color.red);
-
        
         // Communicate with the animator 
         anim.SetFloat("xVelocity", Mathf.Abs(rBody.velocity.x));
