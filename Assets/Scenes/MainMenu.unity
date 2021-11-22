@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 653806594}
   - component: {fileID: 653806593}
   - component: {fileID: 653806592}
+  - component: {fileID: 653806595}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -401,6 +402,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653806590}
   m_CullTransparentMesh: 1
+--- !u!95 &653806595
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653806590}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &674243658
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +432,7 @@ GameObject:
   - component: {fileID: 674243659}
   - component: {fileID: 674243661}
   - component: {fileID: 674243660}
+  - component: {fileID: 674243662}
   m_Layer: 5
   m_Name: TilePanel
   m_TagString: Untagged
@@ -477,6 +498,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674243658}
   m_CullTransparentMesh: 1
+--- !u!95 &674243662
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674243658}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &826479610
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +702,6 @@ GameObject:
   - component: {fileID: 880745102}
   - component: {fileID: 880745101}
   - component: {fileID: 880745100}
-  - component: {fileID: 880745103}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -735,102 +774,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &880745103
-AudioSource:
+--- !u!1 &1440426842
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880745099}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440426844}
+  - component: {fileID: 1440426843}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1440426843
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440426842}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.03
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -3871017852331027037, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6053686928936953732, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1344803658894533136, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 674243662}
+  - key: {fileID: 5578839815061332615, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 653806595}
+  - key: {fileID: 1600991206853351558, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 1469794762}
+  - key: {fileID: 4712083458112244052, guid: a96be483a94d9494f8200dd4e61714ad, type: 2}
+    value: {fileID: 2054928922}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1440426844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440426842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1469794757
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +846,7 @@ GameObject:
   - component: {fileID: 1469794761}
   - component: {fileID: 1469794760}
   - component: {fileID: 1469794759}
+  - component: {fileID: 1469794762}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -964,6 +968,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469794757}
   m_CullTransparentMesh: 1
+--- !u!95 &1469794762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469794757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1479859373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1078,7 @@ GameObject:
   - component: {fileID: 2054928920}
   - component: {fileID: 2054928919}
   - component: {fileID: 2054928921}
+  - component: {fileID: 2054928922}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -1134,6 +1158,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628c20ff06e69c84a944ef9c9374e3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2054928922
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054928917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2065777032
 GameObject:
   m_ObjectHideFlags: 0
