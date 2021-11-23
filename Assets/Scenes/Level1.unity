@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: -302.71}
-  m_SizeDelta: {x: 1158.75, y: 369.99}
+  m_AnchoredPosition: {x: 87.1, y: -115.07}
+  m_SizeDelta: {x: 367.7, y: 153.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50257484
 MonoBehaviour:
@@ -340,6 +340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32df7c2aac6ab6c45939dfb04d08889b, type: 3}
+--- !u!60 &316578825 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1547388391, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
+  m_PrefabInstance: {fileID: 6667208416833294932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &343875324
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,10 +395,12 @@ PlayableDirector:
     value: {fileID: 1286913278}
   - key: {fileID: -6836562504478804670, guid: 7ba65728b157d494ea0e0daf69c86b05, type: 2}
     value: {fileID: 1286913278}
-  - key: {fileID: 4526506640368219836, guid: 7ba65728b157d494ea0e0daf69c86b05, type: 2}
-    value: {fileID: 50257482}
   - key: {fileID: -4496496219618212683, guid: 7ba65728b157d494ea0e0daf69c86b05, type: 2}
     value: {fileID: 508595799}
+  - key: {fileID: 4210490801718408857, guid: 7ba65728b157d494ea0e0daf69c86b05, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -145350840966777241, guid: 7ba65728b157d494ea0e0daf69c86b05, type: 2}
+    value: {fileID: 1005904881}
   m_ExposedReferences:
     m_References:
     - b2aac3deb7c317147b5d1a33565b2810: {fileID: 1379320686}
@@ -592,8 +599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.98, y: -41}
-  m_SizeDelta: {x: 802.85, y: 260.38}
+  m_AnchoredPosition: {x: 3.79, y: -5.3}
+  m_SizeDelta: {x: 242.29, y: 83.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691710005
 MonoBehaviour:
@@ -617,7 +624,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f2dc67bfad24a3e4f81e2d837bcaadc0, type: 3}
-    m_FontSize: 55
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 7
@@ -628,7 +635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shall we get some cherries and get outta here?
+  m_Text: Shall we get em cherries and get outta here?
 --- !u!222 &691710006
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1092,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5897,7 +5904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1670897974689007652, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 4.95
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 2199841021090482377, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: orthographic size
@@ -5963,17 +5970,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 6667208418478385536, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 316578825}
     - target: {fileID: 6667208418478385542, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1066675554}
+    - target: {fileID: 6667208418478385542, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
+      propertyPath: m_Priority
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6667208418478385543, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.9
       objectReference: {fileID: 0}
     - target: {fileID: 9117044516050012694, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.55
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117044516050012694, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 9117044516050012694, guid: 4074861d1d2e86f4ba48b2dbd65666f0, type: 3}
       propertyPath: m_LocalPosition.z
