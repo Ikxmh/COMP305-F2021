@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 public class LevelController : MonoBehaviour
 {
     // Singleton
@@ -18,6 +18,7 @@ public class LevelController : MonoBehaviour
 
     // "public" variables 
     [SerializeField] private Text itemUIText;
+    [SerializeField] private PlayableDirector playableDir;
 
     // private variables 
     private int totalItemsQty = 0, itemCollectedQty = 0;
@@ -32,6 +33,7 @@ public class LevelController : MonoBehaviour
         {
             _instance = this;
         }
+        playableDir.enabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -57,8 +59,11 @@ public class LevelController : MonoBehaviour
     {
         if(itemCollectedQty == totalItemsQty)
         {
-            // go to the next level 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // play a animation of the character jumping up and down 
+            // level end audio
+            Camera.main.gameObject.GetComponent<AudioSource>().Stop();
+            // show level end ui
+            playableDir.enabled = true;
         }
     }
 }

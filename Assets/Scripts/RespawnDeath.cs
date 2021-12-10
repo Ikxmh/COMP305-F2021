@@ -9,7 +9,7 @@ public class RespawnDeath : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trap"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

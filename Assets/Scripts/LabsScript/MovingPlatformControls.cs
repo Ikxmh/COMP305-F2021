@@ -15,6 +15,7 @@ public class MovingPlatformControls : MonoBehaviour
    // private Vector2 currentTarget;
     private int currentTargetIndex = 0;
 
+    [SerializeField] private bool moving;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,6 +28,8 @@ public class MovingPlatformControls : MonoBehaviour
         {
             transform.position = waypoints[0].position;
         }
+
+
         
     }
 
@@ -72,5 +75,23 @@ public class MovingPlatformControls : MonoBehaviour
 
         waypoints.Clear();
 
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            moving = true;
+            other.collider.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.collider.transform.SetParent(null);
+        }
     }
 }
